@@ -53,7 +53,7 @@ startGetCurrentVersion()
     >, the official Vue + Vite starter
   </p>
   <p>
-    Learn more about IDE Support for Vue in the
+    Learn more about IDE Support for Vue in the-111
     <a
       href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
       target="_blank"
