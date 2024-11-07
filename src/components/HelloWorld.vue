@@ -42,7 +42,7 @@ startGetCurrentVersion()
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit-111
-      <code>components/HelloWorld.vue</code> to test HMR-222
+      <code>components/HelloWorld.vue</code> to test HMR-2223333
     </p>
   </div>
 
