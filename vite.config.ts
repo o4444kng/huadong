@@ -6,13 +6,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'; // 有时候不识别，是因为path是node环境下的，commonJs,vite使用的是es;所有添加npm install @types/node --save-dev
 // import typescript from '@rollup/plugin-typescript';
 
-// export default defineConfig({
-//   plugins: [
-//     vue()
-//   ],
-//   base: './'
-// })
-// https://vitejs.dev/config/
+
 export default defineConfig({
   server: {
     proxy: {
@@ -37,7 +31,7 @@ export default defineConfig({
   build: {
     target: 'esnext', // 支持的JavaScript版本
     outDir: 'dist', // 构建时输出目录
-    assetsDir: 'assets', // 放置生成的静态资源的目录
+    // assetsDir: 'assets', // 放置生成的静态资源的目录
     minify: 'terser', // 压缩方式
     terserOptions: {
       compress: {
@@ -49,9 +43,9 @@ export default defineConfig({
     // 构建后是否进行代码分割
     rollupOptions: {
       output: {
-        entryFileNames: `assets/[name].[hash].js`,
-        chunkFileNames: `assets/[name].[hash].js`,
-        assetFileNames: `assets/[name].[hash].[ext]`,
+        entryFileNames: `[name].[hash].js`,
+        chunkFileNames: `[name].[hash].js`,
+        assetFileNames: `[name].[hash].[ext]`,
       },
     },
   },

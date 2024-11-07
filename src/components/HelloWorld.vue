@@ -15,38 +15,11 @@ const goToScroll = () => {
 }
 
 const htmlValue = ref(`<button>点击</button>`)
-// method?: string
-//   keepalive?: boolean
-//   headers?: HeadersInit
-//   body?: BodyInit | nulli
-//   redirect?: RequestRedirect
-//   integrity?: string
-//   signal?: AbortSignal | null
-//   credentials?: RequestCredentials
-//   mode?: RequestMode
-//   referrer?: string
-//   referrerPolicy?: ReferrerPolicy
-//   window?: null
-//   dispatcher?: Dispatcher
-//   duplex?: RequestDuplex access_key=YOUR_API_KEY&query=London
+
 const result = ref<string>('')
 const gotoRequest = () => {
   console.log('gotoRequest')
-  // fetch('/news/api/news/getTrainType', {
-  //   method: 'get',
-  //   credentials: 'omit'
-  // }).then((response) => {
-  //   console.log(response)
-  //   if (response.ok) {
-  //     return response.json()
-  //   }
-  //   throw new Error(`HTTP error! status: ${response.status}`);
-  // }).then((data) => {
-  //   console.log(data)
-  //   result.value = JSON.stringify(data);
-  // }).catch((error) => {
-  //   console.log(error);
-  // })
+
   const xhr = new XMLHttpRequest()
   xhr.open('get', '/news/api/news/getTrainType', true)
   xhr.onload = ((ev) => {
@@ -63,7 +36,7 @@ startGetCurrentVersion()
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>msg - {{ msg }}</h1>
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
